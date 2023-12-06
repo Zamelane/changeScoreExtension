@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "ChangeScoreExtension",
+  "version": "0.1",
+  "description": "Расширение для изменения оценки на экране завершения теста сайта videouroki",
+  "icons": {
+    "16": "./src/img/icons/icon16.png",
+    "19": "./src/img/icons/icon19.png",
+    "32": "./src/img/icons/icon32.png",
+    "48": "./src/img/icons/icon48.png",
+    "128": "./src/img/icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "./src/html/popup.html",
+    "default_icon": {
+      "16": "./src/img/icons/icon16.png",
+      "19": "./src/img/icons/icon19.png",
+      "32": "./src/img/icons/icon32.png",
+      "48": "./src/img/icons/icon48.png",
+      "128": "./src/img/icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://videouroki.net/tests/complete/*"],
+      "js": ["./src/js/videouroki.net.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://videouroki.net/tests/complete/*"],
+      "js": ["./src/js/videouroki.net.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}

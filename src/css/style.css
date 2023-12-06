@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/Roboto.ttf");
+}
+@font-face {
+    font-family: 'Roboto Italic';
+    src: url("../fonts/Roboto-Italic.ttf");
+}
+
+* {
+    font-family: "Roboto";
+    font-size: 17px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+body {
+    padding: 7px;
+    background-color: darkseagreen;
+    min-width: 250px;
+}
+
+.container {
+    padding: 7px;
+    margin-bottom: 7px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+.checkbox-element {
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.checkbox-element:first-child {
+    padding-right: 5px;
+}
+
+.edit-elements {
+    padding: 5px;
+}
+.edit-elements > .text-field:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+.edit-elements > .text-field:last-of-type {
+    margin-bottom: 0;
+}
+.edit-elements > label {
+    font-family: "Roboto Italic";
+}
+.edit-elements > .context {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.centered {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.marks-selected {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+.marks-selected > .mark-select {
+    min-width: 70px;
+    min-height: 70px;
+
+    max-width: 70px;
+    max-height: 70px;
+
+    text-align: center;
+
+    background-color: rgba(129, 220, 165, 0.7);
+    margin-top: 5px;
+    border-radius: 5px;
+}
+.mark-select:not(:last-of-type) {
+    padding-top: 15px;
+    font-size: 25px;
+}
+.mark-select:last-of-type {
+    padding-top: 15px;
+    font-size: 12px;
+}
+.mark-select.select {
+    border: 3px solid;
+}

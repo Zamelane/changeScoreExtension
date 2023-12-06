@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ChangeScoreExtension</title>
+    <script src="../js/popup.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/checkbox-style.css">
+    <link rel="stylesheet" type="text/css" href="../css/textbox-style.css">
+    <link rel="stylesheet" type="text/css" href="../css/button-style.css">
+</head>
+<body>
+    <div id="main">
+        <div class="centered">
+            <button id="isEnabled" class="btn">Загрузка...</button>
+        </div>
+        <!--Информация о выполняющем-->
+        <div class="container">
+            <div class="checkbox-element">
+                <input type="checkbox" class="custom-checkbox" id="isEditName" name="happy" value="false">
+                <label for="isEditName">Менять информацию обучающегося в тесте ?</label>
+            </div>
+            <div class="edit-elements">
+                <div class="text-field">
+                    <label class="text-field__label" for="name">Фамилия и Имя</label>
+                    <input class="text-field__input" type="text" id="name" placeholder="Алисия Уркова">
+                </div>
+
+                <div class="text-field">
+                    <label class="text-field__label" for="group">Наименование группы</label>
+                    <input class="text-field__input" type="text" id="group" placeholder="4558с">
+                </div>
+                <p class="context">(оставь пустым, если не нужно указывать)</p>
+            </div>
+        </div>
+        <!--Информация о времени, затраченном на выполнение-->
+        <div class="container">
+            <div class="checkbox-element">
+                <input type="checkbox" class="custom-checkbox" id="isEditTime" name="happy" value="false">
+                <label for="isEditTime">Менять время, затраченное на выполнение теста?</label>
+            </div>
+            <div class="edit-elements">
+                <div class="text-field">
+                    <label class="text-field__label" for="time">Время, затраченное на выполнение теста</label>
+                    <input class="text-field__input" type="text" id="time" placeholder="00:00:00">
+                </div>
+                <p class="context">(Вводи в формате ЧЧ:ММ:СС)</p>
+            </div>
+        </div>
+        <!--Ставить все задания как выполненные ?-->
+        <div class="container checkbox-element">
+            <input type="checkbox" class="custom-checkbox" id="isEditCountTask" name="happy" value="false">
+            <label for="isEditCountTask">Ставить все задания как выполненные ?</label>
+        </div>
+        <!--Какую оценку ставим ?-->
+        <div class="container marks-selected">
+            <div class="mark-select">3</div>
+            <div class="mark-select">4</div>
+            <div class="mark-select">5</div>
+            <div class="mark-select">По умолчанию</div>
+        </div>
+        <!--Сохранение-->
+        <div class="centered">
+            <button class="btn" id="saveButton">Сохранить</button>
+        </div>
+    </div>
+</body>
+</html>
