@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "ChangeScoreExtension",
-  "version": "0.1",
-  "description": "Расширение для изменения оценки на экране завершения теста сайта videouroki",
+  "version": "1.0",
+  "description": "Расширение для изменения оценки на экране завершения теста сайта videouroki.net",
   "icons": {
     "16": "./src/img/icons/icon16.png",
     "19": "./src/img/icons/icon19.png",
