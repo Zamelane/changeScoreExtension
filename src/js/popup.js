@@ -14,7 +14,7 @@ let time
 let isEditCountTask
 let marks
 
-document.addEventListener("DOMContentLoaded",function(event) {
+document.addEventListener("DOMContentLoaded",function() {
     chrome.storage.local.get(['extensionEnabled', 'markValue', 'timeValue', 'nameValue', 'fullSuccessfulValue'], function(localStorage) {
         isEnabled = localStorage.extensionEnabled ?? false
         settingMarkValue = localStorage.markValue ?? '4' // Получаем желаемую оценку из настроек
