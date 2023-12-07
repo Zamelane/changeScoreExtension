@@ -14,14 +14,13 @@ let time
 let isEditCountTask
 let marks
 
-chrome.storage.local.get(['extensionEnabled', 'markValue', 'timeValue', 'nameValue', 'fullSuccessfulValue'], function(localStorage) {
-    isEnabled = localStorage.extensionEnabled ?? false
-    settingMarkValue = localStorage.markValue ?? '4' // Получаем желаемую оценку из настроек
-    settingEditTime = localStorage.timeValue ?? null // Менять ли время ? Если да, то хранит строку
-    settingName = localStorage.nameValue ?? null // Менять ли кто выполнил ? Если да, то хранит строку с Фамилией и Именем + группа, опционально
-    settingFullSuccessful = localStorage.fullSuccessfulValue ?? null // Ставить ли все задания как выполненные ?
-
-    document.addEventListener("DOMContentLoaded",function(event) {
+document.addEventListener("DOMContentLoaded",function(event) {
+    chrome.storage.local.get(['extensionEnabled', 'markValue', 'timeValue', 'nameValue', 'fullSuccessfulValue'], function(localStorage) {
+        isEnabled = localStorage.extensionEnabled ?? false
+        settingMarkValue = localStorage.markValue ?? '4' // Получаем желаемую оценку из настроек
+        settingEditTime = localStorage.timeValue ?? null // Менять ли время ? Если да, то хранит строку
+        settingName = localStorage.nameValue ?? null // Менять ли кто выполнил ? Если да, то хранит строку с Фамилией и Именем + группа, опционально
+        settingFullSuccessful = localStorage.fullSuccessfulValue ?? null // Ставить ли все задания как выполненные ?
         isEnabledButton = document.getElementById('isEnabled')
 
         // Редактировать Фамилию, Имя и группу ?
